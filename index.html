@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Account System</title>
+    <style>
+        body { background:#1e1e1e; color:#e0e0e0; font-family:Arial; padding:20px; }
+        .container { max-width:600px; margin:auto; }
+        input { width:100%; padding:8px; margin:6px 0 12px 0; border-radius:4px; border:none; }
+        button { background:#4fc3f7; border:none; padding:10px 15px; border-radius:6px; cursor:pointer; font-weight:bold; }
+        button:hover { background:#29b6f6; }
+        pre { background:#2b2b2b; padding:15px; border-radius:8px; white-space:pre-wrap; }
+        .block { margin-bottom:30px; }
+        h2 { margin-bottom:10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Bank Account System — Demo</h1>
+
+    <div class="block">
+        <h2>Створити акаунт</h2>
+        <input id="accNumber" placeholder="Номер рахунку (UA001)">
+        <input id="accHolder" placeholder="Власник (Maxim)">
+        <input id="accType" placeholder="Тип (savings/checking/credit)">
+        <button onclick="uiCreateAccount()">Створити</button>
+    </div>
+
+    <div class="block">
+        <h2>Операції</h2>
+        <input id="opAccount" placeholder="Номер рахунку">
+        <input id="opAmount" placeholder="Сума">
+        <button onclick="uiDeposit()">Депозит</button>
+        <button onclick="uiWithdraw()">Зняття</button>
+    </div>
+
+    <div class="block">
+        <h2>Переказ</h2>
+        <input id="trFrom" placeholder="З рахунку">
+        <input id="trTo" placeholder="На рахунок">
+        <input id="trAmount" placeholder="Сума">
+        <button onclick="uiTransfer()">Переказати</button>
+    </div>
+
+    <div class="block">
+        <h2>Перевірити баланс</h2>
+        <input id="balAccount" placeholder="Номер рахунку">
+        <button onclick="uiGetBalance()">Показати баланс</button>
+    </div>
+
+    <div class="block">
+        <h2>Історія транзакцій</h2>
+        <input id="histAccount" placeholder="Номер рахунку">
+        <button onclick="uiGetHistory()">Показати історію</button>
+    </div>
+
+    <h2>Вивід:</h2>
+    <pre id="output"></pre>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
